@@ -1,9 +1,36 @@
-body {
-    background-color: rgb(193, 255, 255);
+/*body {
+    
+}*/
+a {
+    color: #ef233c;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
 p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 /*header and footer*/
 
-/*main part of the document*/
+header, footer {
+    background: #2B2D42;
+    color: #8d99ae;
+}
+
+header h1, header h2 {
+    color: lightblue;
+}
+
+/*work*/
+
+.work {
+    background: #EDF2F4;
+}
+
+/*eduication*/
+
+.education {
+    background: #8d99ae;
+}
