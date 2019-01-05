@@ -23,25 +23,29 @@ h2{
     margin-top: 0;
 }
 
-.navigation {
-    display: inline-block;
-    padding:12px 160px;
-    background: rgb(225, 192, 255);
+nav {
+    text-align: center;
+    font-size: 0;
+    background: white;
     
-    border-left: 3px solid black;
-        }
-.navigationside {
+    
+}
+nav a {
+    padding: 10px;
     display: inline-block;
-    padding:12px 160px;
-    background: rgb(225, 192, 255);
+    width: 20%;
+    background: white;
+    font-size: 20px;
+    color: #2B2D42;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+nav a:hover {
+    background: #a7ace0;
+    color: lightgrey;
 }
 
-.navigation:hover {
-    background-color: rgb(139, 98, 105);
-}   
-.navigationside:hover {
-    background-color: rgb(139, 98, 105);
-}
 .wrapper {
     max-width: 85%;
     margin: 0 auto;
@@ -50,12 +54,18 @@ h2{
 
 .top-right-col  {
     width: 70%;
+   /* border: 3px solid orange;*/
+    height: 450px;
     
 }
 
 .top-left-col {
     width: 30%;
     float: left;
+    margin: 0;
+   /* border: 3px solid orange;*/
+    height: 450px;
+
 }
 
 a {
@@ -70,6 +80,9 @@ a:hover {
 
 .profile-image {
     border-radius: 60%;
+    float: right;
+    margin-right: 15px;
+
    }
 
 header, footer {
@@ -103,7 +116,5 @@ header h1, header h2 {
     padding: 10px;
     background: white;
     border: 2px solid black;
-    color: #2B2D42;
-
-      
+    color: #2B2D42;      
 }
