@@ -1,0 +1,20 @@
+@supports (grid-area: auto) {
+    @media screen and (max-width: 50em) {
+        
+    
+        .page {
+            max-width: none;
+            display: grid;
+            grid-template-columns: 15em;
+            justify-content: center;
+            /* grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr; */
+        }
+
+        .navigation {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+
+    }
+}
