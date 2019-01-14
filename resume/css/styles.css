@@ -1,197 +1,76 @@
-html {
-    box-sizing: border-box;  /*Paul Irish box sizing*/
+:root {
+    --background: rgba (0, 0, 170, .85);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
   }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-body {
-    font-family: 'Happy Monkey', cursive;
-    font-size: 20px;
-    margin: 0;
-}
 
-h1 h2 {
-    font-family: 'Charm', cursive;
-    font-weight: 400; 
-}
 
-h1 {
-    font-size: 60px;
-}
-h2{
-    font-size: 40px;
-    margin-top: 0;
-}
-
-nav {
-    text-align: center;
-    font-size: 0;
-    background: black;
+/*---------- Mobile phone--------- */
+@supports (grid-area: auto) {
     
-    
-}
-nav a {
-    padding: 10px;
-    display: inline-block;
-    
-    background: black;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-@media (max-width: 50em) {
-    nav a {
-        padding: 10px;
-        display: inline-block;
         
-        background: black;
-        font-size: 12px;
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    h1 {
-        margin: 1px;
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
-    h2 {
-        margin: 0;
-        font-size: 24px;
-    }
-    h3 {
-        margin: 0;
-        font-size: 18px;
-    }
-    .contacts  {
-        padding: 0;
-        font-size:15px; 
-    }
-    p {
-        margin: 0;
-        font-size: 15px;
-    }
-}
-nav a:hover {
-    background: #a7ace0;
-    color: lightgrey;
-}
-
-
-
-
-
-/* .top-left-col {
     
-    
-    width: 30%;
-    float: left; 
-   border: 3px solid orange;
-    
-}*/
+        .page {
 
-/* .top-right-col  {
-    
-    width:70%; */
-   /* border: 3px solid orange;*/
-    /* float: right; 
-}
-    */
-    
+            
+            display: grid;
+            grid-template-columns: 15em;
+            justify-content: space-around;
+            align-items: center;
+            justify-items: stretch;
+            
+            
+            
+        }
 
-/* .wrapper {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 50px;
-    
-} */
+        .navigation {
+            grid-column: 1;
+            
+        }
+        .profile-image {
+            width: 260px;
+            padding: 0;
+            
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.4em;
+        }
+        .contacts {
+            text-align: center;
+        }
+        .navigation, .page-name {            
+            
+            justify-items: stretch;
+            align-items: baseline;          
+            
+        }
 
-a {
-    color: #ef233c;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/*header and footer*/
-
-/* .profile-image {
-    float: left;
-    border-radius: 60%;
-    
-    margin-right: 15px;
-
-   } */
-
-header, footer {
-    background: #2B2D42;
-    color: #8d99ae;
-}
-
-footer {
-    text-align: center;
-}
-
-header h1, header h2 {
-    color: rgb(134, 206, 230);
-    /* margin: 0; */
-    
-}
-
-/*work*/
-
-.work {
-    background: rgb(184, 225, 241);
-}
-
-/*eduication*/
-
-.education {
-    background: linear-gradient(rgba(255, 255, 255, 0.342), rgba(88, 82, 46,0.5)),
-                url(../images/roan-lavery-1272314-unsplash.jpg) no-repeat fixed;
-
-
-}
-.education p, .education h3, .education h2{
-    color: white;
-}
-.contacts a {
-    display: inline-block;
-    padding: 10px;
-    background: white;
-    border: 2px solid black;
-    color: #2B2D42;      
-}
-
-
-
-/*media queries*/
-
-/* @media (min-width: 900px) {
-    .top-left-col {
-        width: 30%;
-        float: left;
-        border: 3px solid orange;
         
-    }
-     
-    .top-right-col  {
-        width:70%;
-        border: 3px solid orange;
-        float: right;
-    }
-} */
+        
+        nav a {
+            font-size: 0.8rem;
+            text-align: center;
+            justify-self: stretch;           
+           
+        }
 
-/* @media (max-width: 899px) {
-    header {
-        text-align: center;
+        .page-name {
+            text-align: center;
+        }
 
-    }
-    .profile-image{
-      width: 200px;   
-    }
-}  */
+        /* Home page signs */
+
+        .signs a {
+            text-decoration: none;
+        }
+
+        
+
+
+    
+}
