@@ -28,7 +28,7 @@ p {
     margin: 16px;
 }
 
-main, footer{
+main, footer, .about-me{
     color: white;
 }
 
@@ -82,22 +82,10 @@ body {
     color: crimson;
 }
 
-/* .page-home body{
-    
-    background: var(--background) ;
 
-} */
-.page-home footer {
-    max-width: 1120px;
-    /* align-self: center; */
-    /* justify-self: stretch; */
-}
 
-/* .signs .sign-item:hover {
-    background: rgba(119, 119, 119, .3);    
-    transition: 1s;
-    overflow: hidden
-} */
+
+
 
 .signs h3:hover, .signs p:hover{
     color: rgb(206, 0, 0);
@@ -107,17 +95,23 @@ body {
 
 
 /* home page grid layout large/medium screen size----------------------------------------------*/
-.page-home{
+ .page-home{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-rows: .3fr 4fr auto 1fr;
     justify-items: center;
+    /* max-width: 100em; */
+    
     
 }
+
+
 
 .home-content {
     grid-area: 2/2;
     overflow: hidden;
+    
+    
 }
 
 .signs {
@@ -126,19 +120,38 @@ body {
     margin: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
+    gap: 2em;
     justify-content: center;
     
     
 }
 
 
+.about-me {
+    max-width: 70em;
+    grid-column: 2;    
+    grid-row: 3;
+    /* text-align: justify; */
+}
+.about-me img {
+    max-width: 20em;
+    float: left;
+    padding: 2em;
+    padding-top: 0;
+}
+
+
+
+.contacts{
+   
+    grid-column: 2;
+    grid-row: 4;
+}
+
 
 /* home page boxes */
 
-.gap {
-    padding: 2em;
-}
+
 .signs {
     padding: 0;
     list-style-type: none;
@@ -158,8 +171,13 @@ body {
         
     }
 
+    .home-content {
+        grid-area: 2/1;
+    }
+
         .signs {
-    
+            
+            
             max-width: none;
             margin: 15px;
             display: grid;
@@ -168,9 +186,16 @@ body {
             justify-content: center;
             
         }
-        .home-content{
+        .about-me {
             grid-column: 1;
         }
+        
+        #page-home footer {
+            
+            grid-column: 1;
+            
+        }
+
         
     }
 
@@ -183,6 +208,39 @@ body {
     background-size: cover;
     border: none;
 
+}
+/* REviews page styling------------------ */
+#reviews-page .signs {
+    gap: 10em;
+}
+
+#reviews-page .page-home{
+    background-image: url(../images/universe.jpg);
+    background-color: rgb(27, 27, 27);
+    /* background-blend-mode: multiply; */
+    background-size: cover;
+    border: none;
+}
+#reviews-page .review-intro {
+    max-width: 1120px;
+
+}
+
+
+.review-intro h1{
+    margin-left: 0;
+}
+
+.copyrights {
+    float: right;
+    
+}
+#reviews-page p {
+    margin-bottom: 4em;
+}
+
+#reviews-page .review-intro p{
+    margin: 0;
 }
 
 /*about main content */
@@ -311,6 +369,10 @@ nav a:hover {
 color: red;
 }
 
+nav a:active {
+    color: #222;
+}
+
 .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
 }
@@ -326,14 +388,7 @@ color: red;
     float: left;
 }
 
-.about-page .pp {
-    
-    /* height: 20em;
-    width: 20em; */
-    max-width: 23em;
-    float: left;
-    margin: 16px;
-}
+
 
 /* medium screen  */
 
@@ -351,7 +406,7 @@ color: red;
         grid-area: 3/1;
     }
     }
-/* ----------big size screeen---------- */
+/* ----------big size screeen navigation---------- */
     @media screen and (min-width: 750px) {
         .page   {
             max-height: 1000px;
@@ -558,3 +613,4 @@ color: red;
         
     }
 }
+
