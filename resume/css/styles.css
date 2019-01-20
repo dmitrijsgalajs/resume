@@ -1,6 +1,3 @@
-:root {
-    --background: rgba(255, 255, 255, 0.9);
-}
 /* box resize */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -282,7 +279,7 @@ body {
 }
 /* nav menu inpired by Kevin Powell*/
 header {
-    background: var(--background);
+    background: rgba(255, 255, 255, 0.9);
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -334,7 +331,7 @@ header {
 }
 
 nav {
-    background: var(--background);
+    background: rgba(255, 255, 255, 0.9);
     position: fixed;
     text-align: left;    
     left: 0;
@@ -436,8 +433,18 @@ nav a:active {
         .logo {
             grid-column: 2 / span 1;
         }
+
+        /* big screen navigation styling */
         nav {
-            all: unset;
+            position: unset;
+            /* text-align: unset;     */
+            /* left: unset; */
+            /* width: unset; */
+            transform: unset;
+            /* transform-origin: unset; */
+            /* transition: unset; */
+            background: unset;
+
             grid-column: 3 / 4;
             display: flex;
             justify-content: flex-end;
@@ -503,17 +510,29 @@ nav a:active {
             grid-area: 2/1;
         }
         
-        footer {
+        .contacts {
             grid-area: 3/1;
             
         }
     .logo {
         font-size: 1.4em;
     }
+
+    /* .about-me {
+        justify-items: stretch;
+    } */
+
+    .about-me img {
+       float: unset;
+       justify-content: center;
+       margin: 2em;
+       margin-top: 0;
+       margin-bottom: 0;
+    }
     
     header {
         
-        background: var(--background);
+        background: rgba(255, 255, 255, 0.9);
         text-align: center;
         position: fixed;
         z-index: 999;
@@ -563,7 +582,7 @@ nav a:active {
     }
     
     nav {
-        background: var(--background);
+        background: rgba(255, 255, 255, 0.9);
         position: fixed;
         text-align: left;    
         left: 0;
