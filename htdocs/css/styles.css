@@ -1,0 +1,635 @@
+/* box resize */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+/* general styling */
+
+
+h1, h2, h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 16px;
+}
+
+img {
+    
+    display: block;
+    width: 100%;
+    height: auto;
+}
+iframe {
+    
+    width: 100%;
+}
+
+p {
+    margin: 16px;
+}
+
+main, footer, .about-me{
+    color: white;
+}
+
+.logo{
+    text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+}
+
+/* footer links*/
+.links a:hover {
+    background: rgb(119, 119, 119);
+    color: black;
+    transition: 500ms;
+}
+/* home page general */
+.page-home {  
+    
+    
+    background-image: url(../images/image3.jpeg);
+    background-color: rgb(27, 27, 27);
+    background-blend-mode: multiply;
+    background-size: cover;
+    border: none;
+}
+
+.reference a{
+    text-decoration: none;
+    color: red;
+
+    
+}
+
+#glossary-page .page-home {  
+    
+    
+    background-image: url(../images/image2.jpg);
+    background-color: rgb(27, 27, 27);
+    background-blend-mode: multiply;
+    background-size: cover;
+    border: none;
+}
+/* glossary styling */
+
+#glossary-page h2{
+    color: crimson;
+}
+
+
+
+
+
+
+.signs h3:hover, .signs p:hover{
+    color: rgb(206, 0, 0);
+    transition: 800ms;
+    overflow: hidden;
+}
+
+
+/* home page grid layout large/medium screen size----------------------------------------------*/
+ .page-home{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: .3fr 4fr auto 1fr;
+    justify-items: center;
+    /* max-width: 100em; */
+    
+    
+}
+
+
+
+.home-content {
+    grid-area: 2/2;
+    overflow: hidden;
+    
+    
+}
+
+.signs {
+    
+    max-width: none;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    justify-content: center;
+    
+    
+}
+
+
+.about-me {
+    max-width: 70em;
+    grid-column: 2;    
+    grid-row: 3;
+    /* text-align: justify; */
+}
+.about-me img {
+    max-width: 20em;
+    float: left;
+    padding: 2em;
+    padding-top: 0;
+}
+
+
+
+.contacts{
+   
+    grid-column: 2;
+    grid-row: 4;
+}
+
+
+/* home page boxes */
+
+
+.signs {
+    padding: 0;
+    list-style-type: none;
+    max-width: 70em;
+
+}
+
+.signs a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 750px){
+    .page-home{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+
+    .home-content {
+        grid-area: 2/1;
+    }
+
+        .signs {
+            
+            
+            max-width: none;
+            margin: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2em;
+            justify-content: center;
+            
+        }
+        .about-me {
+            grid-column: 1;
+        }
+        
+        #page-home footer {
+            
+            grid-column: 1;
+            
+        }
+
+        
+    }
+
+/* jobs page styling */
+
+#jobs-page .page-home{
+    background-image: url(../images/work.jpeg);
+    background-color: rgb(27, 27, 27);
+    background-blend-mode: multiply;
+    background-size: cover;
+    border: none;
+
+}
+/* REviews page styling------------------ */
+#reviews-page .signs {
+    gap: 10em;
+}
+
+#reviews-page .page-home{
+    background-image: url(../images/universe.jpg);
+    background-color: rgb(27, 27, 27);
+    /* background-blend-mode: multiply; */
+    background-size: cover;
+    border: none;
+}
+#reviews-page .review-intro {
+    max-width: 1120px;
+
+}
+
+
+.review-intro h1{
+    margin-left: 0;
+}
+
+.copyrights {
+    float: right;
+    
+}
+#reviews-page p {
+    margin-bottom: 4em;
+}
+
+#reviews-page .review-intro p{
+    margin: 0;
+}
+
+/*about main content */
+
+    
+
+
+.page {
+    
+    background-image: url(../images/image5.jpeg);
+    background-color: rgb(27, 27, 27);
+    background-blend-mode: multiply;
+    background-size: cover;
+    
+    
+}
+
+
+
+/* footer */
+.links a {
+    text-decoration: none;
+    color: whitesmoke;
+    background: black;
+    padding: 3px;
+    border: 1px solid whitesmoke; 
+    display: inline-block;
+    margin: 5px;
+        
+    
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contacts p {
+   float: right;
+}
+/* nav menu inpired by Kevin Powell*/
+header {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+    
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: relative;
+}
+
+.nav-toggle-label span::before {
+    transform: translateY(-7px);
+}
+
+.nav-toggle-label span::after {
+    transform: translateY(5px);
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    text-align: left;    
+    left: 0;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 250ms ease-in-out;
+    
+   
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+nav a:hover {
+color: red;
+}
+
+nav a:active {
+    color: #222;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+    /* Kevin POwell */
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms; 
+}
+
+.about p{
+    
+    text-align: justify;
+    float: left;
+}
+
+
+
+/* medium screen  */
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    .page {
+        display: grid;
+        grid-template-rows: .5fr 5fr 1fr;
+    }
+    
+    .content {
+        grid-area: 2/1;
+    
+    }
+    .contacts {
+        grid-area: 3/1;
+    }
+    }
+/* ----------big size screeen navigation---------- */
+    @media screen and (min-width: 750px) {
+        .page   {
+            max-height: 1000px;
+            display: grid;         
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: minmax(90px, 2fr) 3fr 2fr;
+            
+        
+        } 
+
+        .content {
+            grid-area: 2/2;
+        }
+        
+        footer {
+            grid-area: 3/2;
+            
+        }
+        /* navigation */
+        .nav-toggle-label{
+            display: none;
+        }
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto minmax(550px, 3fr) 1fr;
+        }
+        .logo {
+            grid-column: 2 / span 1;
+        }
+
+        /* big screen navigation styling */
+        nav {
+            position: unset;
+            /* text-align: unset;     */
+            /* left: unset; */
+            /* width: unset; */
+            transform: unset;
+            /* transform-origin: unset; */
+            /* transition: unset; */
+            background: unset;
+
+            grid-column: 3 / 4;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav li {
+            margin-bottom: 0;
+        }
+        nav a {
+            opacity: 1;
+            position: relative;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background: black;
+            transform: scale(0,1);
+            transition: transform ease-in-out 250ms;
+
+        }
+
+        nav a:hover::before {
+            transform: scale(1,1);
+        }
+
+        /* main */
+
+        
+
+        .about h3 {
+            text-align: center;
+        }
+
+        .about p{
+            columns: 2;
+        }
+        
+        
+        
+
+    }
+
+    /*---------- Mobile phone--------- */
+
+    @media screen and (max-width:400px) {
+        .page   {
+            
+            display: grid;         
+            grid-template-columns: auto;
+            grid-template-rows: minmax(60px, 1fr) 7fr 2fr;
+            
+        
+        } 
+        .content {
+            grid-area: 2/1;
+        }
+        
+        .contacts {
+            grid-area: 3/1;
+            
+        }
+    .logo {
+        font-size: 1.4em;
+    }
+
+    /* .about-me {
+        justify-items: stretch;
+    } */
+
+    .about-me img {
+       float: unset;
+       justify-content: center;
+       margin: 2em;
+       margin-top: 0;
+       margin-bottom: 0;
+    }
+    
+    header {
+        
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1em;   
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
+    
+    }
+    
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        
+        display: block;
+        background: black;
+        height: 2px;
+        width: 2em;
+        border-radius: 2px;
+        position: relative;;
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: relative;
+        
+    }
+    .nav-toggle-label span::before {
+        transform: translateY(-7px);
+    }
+    
+    .nav-toggle-label span::after {
+        transform: translateY(3px);
+    }
+    
+    nav {
+        background: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        text-align: left;    
+        left: 0;
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 250ms ease-in-out;
+        
+       
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 100ms ease-in-out;
+    }
+    
+    nav a:hover {
+    color: rgb(121, 47, 47);
+    }
+    
+    .nav-toggle:checked ~ nav {
+        transform: scale(1, 1);
+    }
+    
+    .nav-toggle:checked ~ nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+    .links a{
+
+        display: inline-block;
+        margin: 5px;
+        
+    }
+}
+
